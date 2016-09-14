@@ -1,0 +1,64 @@
+# ncmpcpp configuration file
+
+# connection settings
+mpd_host = "127.0.0.1"
+mpd_port = "6600"
+mpd_music_dir = "~/Music"
+#mpd_connection_timeout = "5"
+mpd_crossfade_time = "1"
+
+# music visualizer settings (currently not working)
+visualizer_in_stereo = "yes"
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "FIFOU"
+visualizer_type = "spectrum"
+visualizer_sync_interval = "10"
+
+# song formatting (review other config file for full info)
+#song_list_format = "{%a - }{%t}|{$8%f$9}$R{$3(%l)$9}"
+
+#song_list_format = "$3%a $8%50t $5%100b"
+song_status_format = "$4%a - %b - %t"
+song_library_format = "{%n - }{%t}|{%f}"
+song_window_title_format = "{%a - }{%t}|{%f}"
+#song_list_format = "{$8%n▕ $9}{$2%a - $9}{$4%t$9}|{$5%f$9}$R{$5▕ %b$9}{$8▕ %l$9}"
+song_columns_list_format = "(30)[blue]{a} (30)[yellow]{b} (30)[blue]{t}"
+
+# playlist settings (again review other config file for full info)
+playlist_display_mode = "columns" (classic/columns)
+browser_display_mode = "classic" (classic/columns)
+
+# user interface
+user_interface = "classic" (classic/alternative)
+default_find_mode = "wrapped" (wrapped/normal)
+#default_space_mode = "add" (add/select)
+header_visibility = "no"
+statusbar_visibility = "yes"
+cyclic_scrolling = "yes"
+follow_now_playing_lyrics = "no"
+show_hidden_files_in_local_browser = "no"
+clock_display_seconds = "no"
+allow_for_physical_item_deletion = "no"
+enable_window_title = "no"
+titles_visibility = "no"
+progressbar_boldness="no"
+
+# color definitions and options
+colors_enabled = "yes"
+visualizer_color = "cyan"
+main_window_color = "white"
+main_window_highlight_color = "green"
+header_window_color = "white"
+volume_color = "white"
+state_line_color = "white"
+state_flags_color = "white"
+alternative_ui_separator_color = "white"
+active_column_color = "white"
+window_border_color = "white"
+active_window_border = "white"
+color1 = "white"
+color2 = "white"
+progressbar_color = "red"
+progressbar_elapsed_color = "red"
+statusbar_color = "white"
+progressbar_look = "─╼ "
