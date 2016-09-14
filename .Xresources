@@ -1,0 +1,128 @@
+! urxvt .Xresources file
+! view urxvt --help for full listing of options
+
+! URXVT SETTINGS
+! --------------------------------------------------------------
+
+! locale 
+*utf8: 1
+*locale: utf8
+URxvt*imLocale: en_US.UTF-8
+ 
+URxvt*scrollstyle: plain
+URxvt*jumpScroll: true
+URxvt*skipScroll: true
+URxvt*saveLines: 1000
+URxvt.scrollBar: false
+
+! fonts
+*font: xft:dina:pixelsize=10,\
+       -*-fontawesome-medium-r-normal-*-12-*-*-*-*-0-*-*
+*boldFont: xft:dina:pixelsize=10:bold
+*italicFont: xft:dina:pixelsize=10:italic
+
+! font settings
+*letterSpace: 0
+URxvt*depth: 32
+URxvt*scrollBar: false
+URxvt*fading: 0
+
+Xft.autohint: true
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
+! color settings
+! special 
+URxvt*foreground: #fdfdfd
+URxvt*background: [100]#1a1a1a
+URxvt*cursorColor: #fdfdfd
+URxvt*pointerColorBackground: #00001e
+URxvt*pointerColorForeground: #2299ae
+URxvt*fadeColor: #000000
+
+! black 
+URxvt*color0: #1a1a1a
+! dark gray
+URxvt*color8: #3b3b3b
+
+! red
+URxvt*color1: #ea62af
+URxvt*color9: #e83099
+
+! green 
+URxvt*color2: #afed5e
+URxvt*color10: #89e70d
+
+! yellow
+URxvt*color3: #f0e875
+URxvt*color11: #e7d90d
+
+! blue 
+URxvt*color4: #5eafed
+URxvt*color12: #0d89e7
+
+! magenta 
+URxvt*color5: #9d5eed
+URxvt*color13: #791cf2
+
+! cyan 
+URxvt*color6: #5eede4
+URxvt*color14: #0de7d9
+
+! light gray
+URxvt*color7: #8b8b8b
+! white
+URxvt*color15: #fdfdfd
+
+
+! XSCREENSAVER SETTINGS
+! --------------------------------------------------------------
+
+! color settings
+xscreensaver.Dialog.foreground: #000000
+xscreensaver.Dialog.background: #d6d6d6
+xscreensaver.Dialog.text.foreground: #000000
+xscreensaver.Dialog.text.background: #b2b2b2
+xscreensaver.Dialog.button.foreground: #000000
+xscreensaver.Dialog.button.background: #d6d6d6
+xscreensaver.passwd.thermometer.foreground: #2fa4ea
+xscreensaver.passwd.thermometer.background: #b2b2b2
+xscreensaver.Dialog.topShadowColor: #ededed
+xscreensaver.Dialog.bottomShadowColor: #4d4d4d
+
+! general settings
+xscreensaver.Dialog.internalBorderWidth: 24
+xscreensaver.Dialog.borderWidth: 1
+xscreensaver.Dialog.shadowThickness: 1
+xscreensaver.Dialog.logo.width: 150
+xscreensaver.Dialog.logo.height: 150
+xscreensaver.passwd.heading.label: XScreenSaver %s
+xscreensaver.passwd.body.label: Screen locked.
+xscreensaver.passwd.unlock.label: OK
+xscreensaver.passwd.login.label: New Login
+xscreensaver.passwd.user.label: Username:
+xscreensaver.passwd.thermometer.width: 6
+xscreensaver.passwd.asterisks: True
+xscreensaver.passwd.uname: True
+xscreensaver.dateFormat: %d-%b-%y %I:%M %p
+xscreensaver.splash.heading.label: XScreenSaver %s
+xscreensaver.splash.demo.label: Settings
+xscreensaver.splash.help.label: Help
+
+! font settings
+xscreensaver.Dialog.headingFont: *-dina-bold-r-*-*-10-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont: *-dina-bold-r-*-*-10-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont: *-dina-bold-r-*-*-10-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont: *-dina-bold-r-*-*-10-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont: *-dina-bold-r-*-*-10-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont: *-dina-bold-r-*-*-10-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont: *-dina-bold-r-*-*-10-*-*-*-*-*-*
+
+! ROFI SETTINGS
+! --------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #1a1a1a, #3b3b3b, #1a1a1a
+rofi.color-normal: #1a1a1a, #fdfdfd, #2b2b2b, #89e70d, #1a1a1a
