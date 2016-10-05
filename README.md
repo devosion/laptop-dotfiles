@@ -1,8 +1,8 @@
 # Dot-files from my laptop
 
-WM: i3-gaps<br />
-Bar: i3bar with i3blocks<br />
-Shell: zsh<br />
-Term: urxvt<br />
-Font: dina<br />
+window-manager: i3-gaps<br />
+status bar: i3bar with i3blocks<br />
+shell: zsh<br />
+terminal: urxvt<br />
+font: dina<br />
 
