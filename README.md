@@ -13,4 +13,8 @@ music player: ncmpcpp<br />
 <td>window-manager</td>
 <td>i3-gaps</td>
 </tr>
+<tr>
+<td>status bar</td>
+<td>i3bar with i3blocks</td>
+</tr>
 </table>
