@@ -1,4 +1,4 @@
-## Dot-files from my laptop
+# Dot-files from my laptop
 
 <table border="0">
 <tr>
