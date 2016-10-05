@@ -76,16 +76,6 @@ alias syctl='systemctl'
 # mfw alias
 alias mfw='echo :O'
 
-# rm -rf function
-#function rm () {
-#    if [[ $1 == "-rf" ]]; then
-#        echo "Nope."
-#    else
-#        echo "Yup."
-#    fi
-#}
-
-
 # zsh settings
 # Uncomment the following line to disable auto-setting terminal title.
 # fixes cwd showing up in tmux title
@@ -98,4 +88,4 @@ ENABLE_CORRECTION="true"
 LS_COLORS='di=1:fi=0:ex=93:ln=31:cd=93;100:bd=32;100:so=34;100:pi=33;100:'
 
 # setup custom prompt
-PS1="%{$fg_bold[green]%}[%~] %{$reset_color%}%{$fg_bold[white]%}% > %{$reset_color%}"
+PS1="%{$fg_bold[green]%}[%M:%{$reset_color%}%{$fg_bold[white]%}%~] % > %{$reset_color%}"

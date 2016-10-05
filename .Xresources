@@ -17,7 +17,8 @@ URxvt.scrollBar: false
 
 ! fonts
 *font: xft:dina:pixelsize=10,\
-       -*-fontawesome-medium-r-normal-*-12-*-*-*-*-0-*-*
+       -*-fontawesome-medium-r-normal-*-12-*-*-*-*-0-*-*,\
+       -*-weather icons-medium-*-*-*-17-*-*-*-*-*-*-*
 *boldFont: xft:dina:pixelsize=10:bold
 *italicFont: xft:dina:pixelsize=10:italic
 
