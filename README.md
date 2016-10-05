@@ -1,13 +1,5 @@
 ## Dot-files from my laptop
 
-window-manager: i3-gaps<br />
-status bar: i3bar with i3blocks<br />
-compositor: compton<br />
-font: dina<br />
-shell: zsh<br />
-terminal: urxvt<br />
-music player: ncmpcpp<br />
-
 <table border="0">
 <tr>
 <td>window-manager</td>
@@ -15,6 +7,26 @@ music player: ncmpcpp<br />
 </tr>
 <tr>
 <td>status bar</td>
-<td>i3bar with i3blocks</td>
+<td>i3bar + i3blocks</td>
+</tr>
+<tr>
+<td>compositor</td>
+<td>compton</td>
+</tr>
+<tr>
+<td>shell</td>
+<td>zsh</td>
+</tr>
+<tr>
+<td>terminal</td>
+<td>urxvt + tmux</td>
+</tr>
+<tr>
+<td>font</td>
+<td>dina, font awesome</td>
+</tr>
+<tr>
+<td>music player</td>
+<td>ncmpcpp</td>
 </tr>
 </table>
