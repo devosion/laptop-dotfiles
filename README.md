@@ -8,7 +8,7 @@ shell: zsh<br />
 terminal: urxvt<br />
 music player: ncmpcpp<br />
 
-<table>
+<table border="0">
 <tr>
 <td>window-manager</td>
 <td>i3-gaps</td>
