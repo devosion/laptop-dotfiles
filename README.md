@@ -2,7 +2,9 @@
 
 window-manager: i3-gaps<br />
 status bar: i3bar with i3blocks<br />
+compositor: compton<br />
+font: dina<br />
 shell: zsh<br />
 terminal: urxvt<br />
-font: dina<br />
+music player: ncmpcpp<br />
 
