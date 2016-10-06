@@ -29,6 +29,10 @@
 <td>music player</td>
 <td>ncmpcpp</td>
 </tr>
+<<tr>
+<td>launcher</td>
+<td>rofi</td>
+</tr>
 </table>
 
 [Screenshots](http://imgur.com/a/R4bId)
