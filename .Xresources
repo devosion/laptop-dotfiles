@@ -18,7 +18,6 @@ URxvt.scrollBar: false
 ! fonts
 *font: xft:dina:pixelsize=10,\
        -*-fontawesome-medium-r-normal-*-12-*-*-*-*-0-*-*,\
-       -*-weather icons-medium-*-*-*-17-*-*-*-*-*-*-*
 *boldFont: xft:dina:pixelsize=10:bold
 *italicFont: xft:dina:pixelsize=10:italic
 
@@ -77,50 +76,6 @@ URxvt*color14: #0de7d9
 URxvt*color7: #8b8b8b
 ! white
 URxvt*color15: #fdfdfd
-
-
-! XSCREENSAVER SETTINGS
-! --------------------------------------------------------------
-
-! color settings
-xscreensaver.Dialog.foreground: #000000
-xscreensaver.Dialog.background: #d6d6d6
-xscreensaver.Dialog.text.foreground: #000000
-xscreensaver.Dialog.text.background: #b2b2b2
-xscreensaver.Dialog.button.foreground: #000000
-xscreensaver.Dialog.button.background: #d6d6d6
-xscreensaver.passwd.thermometer.foreground: #2fa4ea
-xscreensaver.passwd.thermometer.background: #b2b2b2
-xscreensaver.Dialog.topShadowColor: #ededed
-xscreensaver.Dialog.bottomShadowColor: #4d4d4d
-
-! general settings
-xscreensaver.Dialog.internalBorderWidth: 24
-xscreensaver.Dialog.borderWidth: 1
-xscreensaver.Dialog.shadowThickness: 1
-xscreensaver.Dialog.logo.width: 150
-xscreensaver.Dialog.logo.height: 150
-xscreensaver.passwd.heading.label: XScreenSaver %s
-xscreensaver.passwd.body.label: Screen locked.
-xscreensaver.passwd.unlock.label: OK
-xscreensaver.passwd.login.label: New Login
-xscreensaver.passwd.user.label: Username:
-xscreensaver.passwd.thermometer.width: 6
-xscreensaver.passwd.asterisks: True
-xscreensaver.passwd.uname: True
-xscreensaver.dateFormat: %d-%b-%y %I:%M %p
-xscreensaver.splash.heading.label: XScreenSaver %s
-xscreensaver.splash.demo.label: Settings
-xscreensaver.splash.help.label: Help
-
-! font settings
-xscreensaver.Dialog.headingFont: *-dina-bold-r-*-*-10-*-*-*-*-*-*
-xscreensaver.Dialog.bodyFont: *-dina-bold-r-*-*-10-*-*-*-*-*-*
-xscreensaver.Dialog.labelFont: *-dina-bold-r-*-*-10-*-*-*-*-*-*
-xscreensaver.Dialog.unameFont: *-dina-bold-r-*-*-10-*-*-*-*-*-*
-xscreensaver.Dialog.buttonFont: *-dina-bold-r-*-*-10-*-*-*-*-*-*
-xscreensaver.Dialog.dateFont: *-dina-bold-r-*-*-10-*-*-*-*-*-*
-xscreensaver.passwd.passwdFont: *-dina-bold-r-*-*-10-*-*-*-*-*-*
 
 ! ROFI SETTINGS
 ! --------------------------------------------------------------
