@@ -30,3 +30,10 @@
 <td>ncmpcpp</td>
 </tr>
 </table>
+
+<table>
+<tr>
+<td><img src="http://imgur.com/l27CTOo" /></td>
+<td><img src="http://imgur.com/KNMkeXh" /></td>
+</tr>
+
