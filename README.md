@@ -31,9 +31,4 @@
 </tr>
 </table>
 
-<table>
-<tr>
-<td>![alt tag](http://imgur.com/KNMkeXh)</td>
-<td><img src="http://imgur.com/KNMkeXh" /></td>
-</tr>
 
