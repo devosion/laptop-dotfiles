@@ -31,4 +31,4 @@
 </tr>
 </table>
 
-![Screenshots](http://imgur.com/a/R4bId)
+[Screenshots](http://imgur.com/a/R4bId)
