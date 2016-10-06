@@ -33,7 +33,7 @@
 
 <table>
 <tr>
-<td><img src="http://imgur.com/l27CTOo" /></td>
+<td>![alt tag](http://imgur.com/KNMkeXh)</td>
 <td><img src="http://imgur.com/KNMkeXh" /></td>
 </tr>
 
