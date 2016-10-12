@@ -23,10 +23,10 @@ fi
 # commands for programs / scripts to run before wm / de is started
 
 # run feh and set background
-#. ~/.fehbg &
+. ~/.fehbg &
 
 # run random wallpaper script
-. ~/scripts/wallpaper-changer/wp-changer
+#. ~/scripts/wallpaper-changer/wp-changer
 
 # start xscreensaver
 /usr/bin/xscreensaver -no-splash &

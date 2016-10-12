@@ -37,19 +37,19 @@ Xft.lcdfilter: lcddefault
 ! color settings
 ! special 
 URxvt*foreground: #fdfdfd
-URxvt*background: [100]#1a1a1a
+URxvt*background: [100]#010b13
 URxvt*cursorColor: #fdfdfd
 URxvt*pointerColorBackground: #00001e
 URxvt*pointerColorForeground: #2299ae
 URxvt*fadeColor: #000000
 
 ! black 
-URxvt*color0: #1a1a1a
+URxvt*color0: #010b13
 ! dark gray
-URxvt*color8: #3b3b3b
+URxvt*color8: #0a1c29
 
 ! red
-URxvt*color1: #ea62af
+URxvt*color1: #ua62af
 URxvt*color9: #e83099
 
 ! green 
@@ -80,5 +80,5 @@ URxvt*color15: #fdfdfd
 ! ROFI SETTINGS
 ! --------------------------------------------------------------
 rofi.color-enabled: true
-rofi.color-window: #1a1a1a, #3b3b3b, #1a1a1a
-rofi.color-normal: #1a1a1a, #fdfdfd, #2b2b2b, #89e70d, #1a1a1a
+rofi.color-window: #010b13, #0a1c29, #0a1c29
+rofi.color-normal: #010b13, #fdfdfd, #0a1c29, #89e70d, #010b13

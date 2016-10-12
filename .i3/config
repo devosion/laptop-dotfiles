@@ -5,7 +5,7 @@ set $mod Mod4
 font pango:Dina 8
 
 # set gaps
-gaps inner 8
+gaps inner 12
 gaps outer 8 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -171,39 +171,42 @@ bindsym $mod+r mode "resize"
 # configure mouse focus 
 focus_follows_mouse no
 
-bar {
+#bar {
 
     #font pango: dina, Font Awesome 8
-    workspace_buttons yes
-    strip_workspace_numbers yes
-    status_command i3blocks
-    position top
+    #workspace_buttons yes
+    #strip_workspace_numbers yes
+    #status_command i3blocks
+    #position top
     
-    colors {
+    #colors {
         
-        background #000000
-        statusline #8b8b8b
-        separator  #000000
+        #background #000000
+        #statusline #8b8b8b
+        #separator  #000000
         
         #class              border  backgr  text
-        focused_workspace   #000000 #000000 #e7d90d
-        active_workspace    #000000 #000000 #e7d90d
-        inactive_workspace  #000000 #000000 #3b3b3b
-        urgent_workspace    #000000 #000000 #e83099
+        #focused_workspace   #000000 #000000 #e7d90d
+        #active_workspace    #000000 #000000 #e7d90d
+        #inactive_workspace  #000000 #000000 #3b3b3b
+        #urgent_workspace    #000000 #000000 #e83099
  
-    }
-}
+    #}
+#}
 
 # configure borders
 new_window pixel 3
 
 # class		            	border	backgr	text	indicator
-client.focused              #1a1a1a #3b3b3b #fefecc #3b3b3b
-client.focused_inactive     #1a1a1a #1a1a1a #fefecc #1a1a1a
-client.unfocused            #1a1a1a #1a1a1a #fefecc #1a1a1a
-client.urgent               #1a1a1a #9ab66d #fefecc #9ab66d
+client.focused              #1a1a1a #163d5a #fefecc #163d5a 
+client.focused_inactive     #1a1a1a #010b13 #fefecc #010b13 
+client.unfocused            #1a1a1a #010b13 #fefecc #010b13 
+client.urgent               #1a1a1a #010b13 #fefecc #010b13 
 
 # configure startup applications
+
+# set lemonbar to run 
+exec ~/scripts/lbar-launcher
 
 # configure compton for startup and during restart
 #exec compton -b 

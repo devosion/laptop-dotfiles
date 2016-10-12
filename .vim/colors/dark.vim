@@ -33,4 +33,4 @@ hi ErrorMsg ctermfg=black ctermbg=yellow
 hi VertSplit ctermfg=green
 hi StatusLine ctermfg=green
 hi StatusLineNC ctermfg=green
-hi Folded ctermfg=white ctermbg=magenta
+hi Folded ctermfg=blue ctermbg=black

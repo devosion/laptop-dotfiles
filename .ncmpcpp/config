@@ -22,7 +22,7 @@ song_status_format = "$4%a - %b - %t"
 song_library_format = "{%n - }{%t}|{%f}"
 song_window_title_format = "{%a - }{%t}|{%f}"
 #song_list_format = "{$8%n▕ $9}{$2%a - $9}{$4%t$9}|{$5%f$9}$R{$5▕ %b$9}{$8▕ %l$9}"
-song_columns_list_format = "(30)[blue]{a} (30)[yellow]{b} (30)[blue]{t}"
+song_columns_list_format = "(23)[blue]{a} (35)[green]{b} (30)[blue]{t}"
 
 # playlist settings (again review other config file for full info)
 playlist_display_mode = "columns" (classic/columns)
@@ -46,7 +46,7 @@ progressbar_boldness="no"
 # color definitions and options
 colors_enabled = "yes"
 visualizer_color = "cyan"
-main_window_color = "white"
+main_window_color = "green"
 main_window_highlight_color = "green"
 header_window_color = "white"
 volume_color = "white"
@@ -62,3 +62,4 @@ progressbar_color = "red"
 progressbar_elapsed_color = "red"
 statusbar_color = "white"
 progressbar_look = "─╼ "
+#progressbar_look = "   "
