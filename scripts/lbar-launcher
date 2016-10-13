@@ -1,0 +1,22 @@
+#!/bin/bash
+# launcher and configuration for lemon bar
+
+# color definitions
+#bg_color="#000000"
+
+# set location and dimensions for lemonbar
+w="1280"
+h="20"
+x="0"
+y="0"
+
+# set font for lemonbar
+#FONT="-*-dina-medium-r-normal-*-10-*-*-*-c-*-*-1"
+#FONT="-*-dina-medium-r-normal-*-10-*-*-*-*-*-*-*"
+font="dina:pixelsize=10:antialias=0"
+#FONT1="-*-fontawesome-medium-r-normal-*-17-*-*-*-*-0-*-*"
+font1="FontAwesome:pixelsize=13"
+
+#~/.lemon-scripts/lbar-status.sh | lemonbar -f $FONT -g $WHXY -B $DBLUE -F $WHITE 
+~/scripts/lbar-output | lemonbar -g ${w}x${h}+${x}+${y} \
+    -f $font -f $font1 -p -b

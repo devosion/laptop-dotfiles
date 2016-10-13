@@ -1,0 +1,240 @@
+#!/bin/bash
+# revised 10/7/16
+# lemon bar script that displays a clock, workspace info...
+
+# background lemon bar color definitions
+bg_black1="%{B#000000}"
+bg_black2="%{B#1a1a1a}"
+
+# foreground lemon bar color definitions
+fg_white1="%{F#f7f7f7}"
+fg_white2="%{F#e5e5e5}"
+fg_white3="%{F#6b6b6b}"
+
+# background color definitions
+bg_green="%{B#477807}"
+bg_yellow="%{B#787107}"
+
+# foreground color definitions
+fg_green="%{F#89e70d}"
+fg_yellow="%{F#e7d90d}"
+fg_red="%{F#e83099}"
+
+fg_blue1="%{F#0d89e7}"
+fg_blue2="%{F#305069}"
+
+# volume color definitions; from lightest to darkest
+bg_white4="%{B#666666}"
+bg_white3="%{B#4d4d4d}"
+bg_white2="%{B#333333}"
+
+# lemon bar separator
+sep="   "
+
+# define the clock
+Clock() {
+
+    date=$(date +"%m.%d.%y %I:%M %p")
+
+    echo "$date "
+}
+
+# grab battery information
+Battery() {
+
+    # grab current battery status from acpi using cut and sed
+    # sed removes whitespace and %
+    # cut picks a delimiter, then a field
+    bat="$(acpi -b | cut -d, -f2 | sed 's/ //g;s/%//g')"
+
+    # color battery output based on percentage
+    # battery is <= 50
+    if [ $bat -le 25 ]; then
+        bat_output=" ${fg_red} ${bat}%{F-} "
+
+    # battery is <=50
+    elif [ $bat -le 50 ]; then
+        bat_output=" ${fg_yellow} ${bat}%{F-} "
+
+    # battery is <=75
+    elif [ $bat -le 75 ]; then
+        bat_output=" ${fg_green} ${bat}%{F-} "
+
+    # battery is <=100
+    elif [ "$bat" -le 100 ]; then
+        bat_output="  ${bat} "
+
+    # error message
+    else
+        bat_output="null"
+
+    fi
+
+    echo "$bat_output"
+}
+
+# grab volume information
+Volume() {
+
+    # grab volume and strip of [%]
+    vol=$(amixer sget Master | grep 'Front Left:' | awk '{print $5}' | \
+    sed 's/\[//g;s/\]//g;s/\%//g')
+
+    # grab mute status and strip of []
+    state=$(amixer sget Master | grep 'Front Left:' | awk '{print $6}' | \
+    sed 's/[^a-z]//g')
+
+    # print volume if state is on, otherwise print mute
+    #if [[ $state == "on" ]]; then
+
+    # check for mute
+    if [[ $state == "on" ]]; then
+        output="  ${vol} "
+
+    else
+        output="  mute "
+
+    fi
+
+    echo "$output"
+
+}
+
+# grab wifi info
+Wifi() {
+  
+    # grab wifi status and run through sed
+    wifi="$(iwconfig wlan0 | sed -n 's/"//g; s/\s*$//g; s/.*ESSID://p')"
+
+    # check if wifi isn't connected
+    if [ "$wifi" == "off/any" ]; then
+        wifi_output=""
+    else
+        wifi_output=" ${wifi}"
+    fi
+
+    echo "$wifi_output"
+}
+
+# set current workspace
+Workspace() {
+
+    # xprop commands
+    cur=$(xprop -root _NET_CURRENT_DESKTOP | awk '{print $3}')
+    tot=$(xprop -root _NET_NUMBER_OF_DESKTOPS | awk '{print $3}')
+    last=$(xprop -root | grep '_NET_DESKTOP_NAMES(UTF8_STRING)' |\
+awk '{print $(NF)}' | sed 's/[^0-9]//g')
+
+    # set current workspace number
+    cur=$((cur+1))
+
+    # incrementor
+    inc=1
+
+    for w in $(seq 1 $tot); do
+
+        # last workspace fix
+        if [[ $inc == $tot ]]; then
+            wkspc=$last
+        else
+            wkspc=$inc
+        fi
+
+        # check for current workspace
+        if [[ $inc == $cur ]]; then
+            
+            line="${line} ${wkspc} "
+
+        else
+
+            line="${line}${fg_blue2} ${wkspc} %{F-}"
+
+        fi
+
+        inc=$((inc+1))
+
+    done
+
+    #echo "$cur | $tot | $line"
+    echo "$line"
+
+}
+
+# set and show uptime
+Uptime () {
+
+    # calculate minutes
+    mins=$(awk -F'.' '{print int($1/60%60)}' /proc/uptime)
+
+    # calculate hours
+    hours=$(awk -F'.' '{print int($1/3600%24)}' /proc/uptime)
+
+    # calculate days
+    #days=$(awk -F'.' '{print int($1/86400)}' /proc/uptime)
+
+    # add leading 0 to secs if less than 9
+    #if [[ $secs -le 9 ]]; then secs="0${secs}"; fi
+
+    uptime_output=" ${hours}h ${mins}m"
+
+    echo "$uptime_output"
+
+}
+
+# set and show temperature
+Temperature() {
+
+    # grab temp 1 from sensors -f and parse
+    temp1=$(sensors -f | grep temp1 | awk '{print $2}' | sed 's/+//g;s/°F//g;' |\
+    awk -F'.' '{print $1}')
+
+    # grab temp 2 from sensors -f and parse
+    temp2=$(sensors -f | grep temp2 | awk '{print $2}' | sed 's/+//g;s/°F//g;' |\
+    awk -F'.' '{print $1}') 
+
+    # set display threshold in fahrenheit
+    #threshold=150
+
+    # check for lowest temp
+    if [[ $temp1 -lt $temp2 ]]; then
+        testtemp="$temp1"
+    elif [[ $temp2 -lt $temp1 ]]; then
+        testtemp="$temp2"
+    elif [[ $temp1 -eq $temp2 ]]; then
+        testtemp="$temp1"
+    fi
+
+    #testtemp=160
+
+    # check for temp range
+    if [[ $testtemp -le 139 ]]; then
+        tempoutput=" ${fg_white1}%{F-} $testtemp " 
+
+    elif [[ $testtemp -le 159 ]]; then
+        tempoutput=" ${fg_yellow}%{F-} $testtemp " 
+    
+    elif [[ $testtemp -ge 160 ]]; then
+        tempoutput=" ${fg_red}%{F-} $testtemp " 
+    fi
+
+    echo "$tempoutput"
+
+}
+
+# print line for lbar; runs indefinitely
+while true; do
+
+    # output to lemonbar
+    echo "${fg_white1}$(Workspace)%{l}\
+%{r}${fg_white1}\
+$(Wifi)${sep}\
+$(Temperature)$(Volume)\
+$(Battery)${sep}\
+$(Uptime)${sep}\
+$(Clock)\
+%{F-}%{B-}"
+
+    # wait 1 second before running loop again     
+    sleep 1;
+
+done
