@@ -35,4 +35,5 @@
 </tr>
 </table>
 
-[Screenshots](http://imgur.com/a/R4bId)
+~~[Screenshots](http://imgur.com/a/R4bId)~~ 
+[Screenshots 10/13/16](http://imgur.com/a/63X0J)
