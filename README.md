@@ -7,7 +7,7 @@
 </tr>
 <tr>
 <td>status bar</td>
-<td>i3bar + i3blocks</td>
+<td>lemon bar</td>
 </tr>
 <tr>
 <td>compositor</td>
@@ -35,5 +35,5 @@
 </tr>
 </table>
 
-~~[Screenshots](http://imgur.com/a/R4bId)~~ 
+~~[Screenshots](http://imgur.com/a/R4bId)~~ <br>
 [Screenshots 10/13/16](http://imgur.com/a/63X0J)
