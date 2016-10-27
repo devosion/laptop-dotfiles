@@ -1,0 +1,1 @@
+/home/devosion/scripts/blocks/wifi.sh

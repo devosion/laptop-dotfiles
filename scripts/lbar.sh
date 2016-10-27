@@ -1,0 +1,1 @@
+/home/devosion/scripts/lemonbar/lbar.sh
